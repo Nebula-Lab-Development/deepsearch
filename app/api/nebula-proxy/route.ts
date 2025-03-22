@@ -8,7 +8,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${request.headers.get("x-nebula-api-key") || process.env.NEBULA_API_KEY || ""}`,
+        Authorization: `Bearer ${request.headers.get("nebula-api-key") || process.env.NEBULA_API_KEY || ""}`,
       },
       body: JSON.stringify(requestData),
     })
